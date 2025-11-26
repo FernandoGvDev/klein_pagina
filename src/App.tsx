@@ -16,7 +16,6 @@ function App() {
       <SecaoImagineSolucao />
       <SecaoEbook />
       <SecaoTopicosEbook />
-      <SecaoCtaEbook />
       <Offer />
       <Footer />
       
