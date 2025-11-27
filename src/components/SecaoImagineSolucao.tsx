@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { FaUsers, FaDollarSign, FaCalendarCheck, FaChartLine } from "react-icons/fa";
 import type { Variants } from "framer-motion";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
 export default function SecaoImagineSolucao() {
@@ -17,74 +18,67 @@ export default function SecaoImagineSolucao() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold leading-tight mb-10"
+          className="text-3xl sm:text-4xl font-bold leading-tight mb-12"
         >
           Imagine…
         </motion.h2>
 
-        {/* FRASES CURTAS */}
-        <div className="flex flex-col gap-5 mb-16">
+        {/* ÍCONES + FRASES CURTAS (IDEIA 2) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16">
           {[
-            "Nunca mais ficar sem clientes.",
-            "Cobrar com segurança e sem dúvidas.",
-            "Clientes chamando você, não o contrário.",
-            "Agenda cheia mês após mês."
-          ].map((text, index) => (
-            <motion.p
-              key={index}
+            { icon: <FaUsers className="w-10 h-10 text-blue-600" />, text: "Clientes" },
+            { icon: <FaDollarSign className="w-10 h-10 text-blue-600" />, text: "Preço certo" },
+            { icon: <FaCalendarCheck className="w-10 h-10 text-blue-600" />, text: "Agenda cheia" },
+            { icon: <FaChartLine className="w-10 h-10 text-blue-600" />, text: "Crescimento" },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              transition={{ delay: index * 0.35 }}
-              className="text-lg sm:text-xl text-gray-700"
+              transition={{ delay: i * 0.2 }}
+              className="flex flex-col items-center text-gray-700"
             >
-              {text}
-            </motion.p>
+              {item.icon}
+              <p className="mt-2 font-medium">{item.text}</p>
+            </motion.div>
           ))}
         </div>
 
-        {/* APRESENTAÇÃO DO EBOOK */}
-        <motion.h3
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-2xl sm:text-3xl font-bold leading-tight mb-6"
-        >
-          A solução existe.
-        </motion.h3>
-
+        {/* FRASE DE IMPACTO (IDEIA 7) */}
         <motion.p
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-lg text-gray-700 leading-relaxed mb-12 max-w-2xl mx-auto"
+          className="text-2xl font-semibold text-gray-800 mb-10"
         >
-          O Ebook <strong>Lote Sua Agenda</strong> mostra o caminho real que um pintor usou para sair da incerteza, fechar mais serviços e manter clientes chegando todos os meses.
+          Simples. Direto. Feito para pintores.
         </motion.p>
 
-        {/* BENEFÍCIOS RESUMIDOS */}
-        <div className="max-w-2xl mx-auto flex flex-col gap-4 text-left">
-          {[
-            "Atraia clientes todos os meses.",
-            "Aprenda a dar preço sem perder dinheiro.",
-            "Método simples para lotar sua agenda.",
-          ].map((item, index) => (
-            <motion.li
-              key={index}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.25 }}
-              className="text-gray-800 text-lg list-none border-l-4 border-blue-500 pl-4"
-            >
-              {item}
-            </motion.li>
-          ))}
-        </div>
+        {/* APRESENTAÇÃO CURTA (IDEIA 6) */}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-lg text-gray-700 max-w-2xl mx-auto mb-14 leading-relaxed"
+        >
+          O <strong>Lote Sua Agenda</strong> é um guia rápido e direto para pintores aumentarem clientes,
+          cobrarem com confiança e manterem a agenda cheia — sem depender de indicação.
+        </motion.p>
+
+        {/* FRASE CURTA (IDEIA 3) */}
+        <motion.h3
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-xl sm:text-2xl font-bold text-gray-900"
+        >
+          Um método real, aplicado por pintores de verdade.
+        </motion.h3>
 
       </div>
     </section>

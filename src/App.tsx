@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 function App() {
   return (
     <>
-    <div className="overflow-hidden">
+    <div className="">
       <Hero />
       <PainSection />
       <SecaoImagineSolucao />

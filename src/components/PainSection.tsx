@@ -12,7 +12,7 @@ const fadeUp: Variants = {
 
 export default function PainSection() {
   return (
-    <section className="w-full bg-white text-gray-900 py-24 px-6">
+    <section className="w-full bg-white text-gray-900 pt-24 px-6">
       <div className="max-w-3xl mx-auto text-center">
 
         {/* Micro-heading emocional */}
@@ -29,7 +29,7 @@ export default function PainSection() {
 
         {/* Título emocional forte — dividido em blocos para pausas dramáticas */}
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold leading-tight mb-6"
+          className="text-3xl sm:text-4xl font-extrabold mb-3"
           aria-level={2}
         >
           <motion.span
