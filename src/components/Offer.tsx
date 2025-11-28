@@ -15,10 +15,13 @@ export const Offer = () => {
   return (
     <section
       id="oferta"
-      className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-blue-300 to-blue-950 relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center justify-center px-6 bg-linear-to-b from-blue-300 to-blue-950 relative overflow-hidden pt-20 bg-no-repeat bg-cover"
+      style={{ backgroundImage: `url(/pintor.webp)` }}
     >
       {/* Glow */}
-      <div className="absolute -top-20 -right-20 w-96 h-96 bg-emerald-400/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute w-full h-full bg-black/50 blur-[120px] rounded-full pointer-events-none" />
+
+
 
       {/* CARD */}
       <motion.div
@@ -26,7 +29,7 @@ export const Offer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-neutral-900/10 border border-neutral-800 rounded-xl p-8 shadow-lg max-w-3xl w-full relative z-10 mb-20"
+        className="bg-neutral-900 border border-neutral-800 rounded-xl p-8 shadow-lg max-w-3xl w-full relative z-10 mb-20"
       >
         {/* TÍTULO */}
         <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -67,7 +70,7 @@ export const Offer = () => {
         <div className="mt-8 flex items-baseline gap-4">
           <span className="text-lg line-through text-red-400">R$97</span>
 
-          <span className="text-5xl md:text-6xl font-extrabold text-emerald-400">
+          <span className="text-3xl md:text-6xl font-extrabold text-emerald-400">
             R$47
           </span>
 
