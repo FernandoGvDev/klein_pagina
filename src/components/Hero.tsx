@@ -148,19 +148,21 @@ export default function HeroPintorEmpresario() {
 
         {/* CTA */}
         <motion.div variants={fadeUp} className="w-full mt-10 flex justify-center">
-          <a
-            href="#checkout"
-            className="
-              px-8 py-4 rounded-xl font-semibold text-lg
-              bg-transparent hover:bg-blue-700 
-              text-blue-400 shadow-[0_0_25px_rgba(59,130,246,0.45)]
-              transition-all duration-300
-              hover:shadow-[0_0_35px_rgba(59,130,246,0.75)]
-              active:scale-95
-            "
-          >
-            Quero avançar para o próximo nível
-          </a>
+<button className="button">
+  <span>Avançar Para o Próximo Nível</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
+    <polygon
+      points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"
+    ></polygon>
+    <polygon
+      points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"
+    ></polygon>
+    <polygon
+      points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"
+    ></polygon>
+  </svg>
+</button>
+
         </motion.div>
 
         <motion.p variants={fadeUp} className="text-center text-gray-300 text-sm mt-3">

@@ -1,9 +1,19 @@
-import { motion, useScroll, useTransform, type Variants } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import type { Variants } from "framer-motion"
 import { useRef } from "react";
 
 // -----------------------------
 // Variants
 // -----------------------------
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: "easeOut" },
+  }
+};
 
 const bounceUp: Variants = {
   hidden: { opacity: 0, y: 28, scale: 0.96 },
@@ -30,15 +40,6 @@ const staggerParent: Variants = {
     transition: { staggerChildren: 0.18 }
   }
 };
-
-const buttonMotion: Variants = {
-  hover: { scale: 1.05, filter: "brightness(1.2)" },
-  tap: { scale: 0.92 }
-};
-
-// -----------------------------
-// COMPONENTE
-// -----------------------------
 
 export default function SecaoEbook() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -91,9 +92,9 @@ export default function SecaoEbook() {
           {/* TÍTULO */}
           <motion.h2
             variants={bounceUp}
-            className="text-4xl md:text-5xl font-extrabold text-gray-100 mb-4 leading-tight"
+            className="text-4xl md:text-4xl font-extrabold text-gray-100 mb-4 leading-tight"
           >
-            O método que faz pintores estruturais saírem da falta de serviço para uma agenda cheia o ano inteiro
+            O método simples que faz pintores saírem da incerteza e conquistarem uma agenda cheia o ano todo
           </motion.h2>
 
           {/* PARÁGRAFO 1 */}
@@ -101,40 +102,39 @@ export default function SecaoEbook() {
             variants={blurIn}
             className="text-lg text-gray-300 leading-relaxed mb-6 will-change-[opacity,filter]"
           >
-            <strong className="text-white">Lote Sua Agenda</strong> é o eBook que revela a rotina,
-            as estratégias e os bastidores de um pintor que saiu da incerteza e
-            passou a ter trabalho todos os meses — sem depender da sorte.
+            <strong className="text-white">Lote Sua Agenda</strong> é o eBook que mostra, passo a passo, a rotina, as estratégias e o processo real usado por um pintor que saiu da falta de serviço e passou a ter clientes todos os meses — sem depender de indicação ou sorte.
           </motion.p>
-
+          <motion.p
+            variants={blurIn}
+            className="text-lg text-gray-300 leading-relaxed mb-6 will-change-[opacity,filter]"
+          >
+            Aqui você aprende exatamente o que fazer para atrair clientes, cobrar o valor certo e manter sua agenda sempre cheia, de forma prática e realista.
+          </motion.p>
           {/* PARÁGRAFO 2 */}
           <motion.p
             variants={blurIn}
             className="text-lg text-gray-300 leading-relaxed mb-10 will-change-[opacity,filter]"
           >
-            Feito para pintores que querem clientes, preço certo e uma agenda
-            cheia, de forma simples e realista.
+            Se você é pintor e está cansado de torcer para aparecer serviço… chegou a hora de mudar isso.
           </motion.p>
+        </motion.div>
 
-          {/* BOTÃO */}
-          <motion.a
-            href="#checkout"
-            role="button"
-            aria-label="Avançar para o checkout"
-            variants={buttonMotion}
-            whileHover="hover"
-            whileTap="tap"
-            className="
-              px-8 py-4 rounded-xl font-semibold text-lg
-              bg-transparent hover:bg-blue-700 
-              text-blue-400 
-              shadow-[0_0_25px_rgba(59,130,246,0.45)]
-              transition-all duration-300
-              hover:shadow-[0_0_35px_rgba(59,130,246,0.75)]
-              will-change-transform
-            "
-          >
-            Quero avançar para o próximo nível
-          </motion.a>
+        {/* CTA */}
+        <motion.div variants={fadeUp} className="w-full mt-30 flex justify-center">
+          <button className="button">
+            <span>Avançar Para o Próximo Nível</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
+              <polygon
+                points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"
+              ></polygon>
+              <polygon
+                points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"
+              ></polygon>
+              <polygon
+                points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"
+              ></polygon>
+            </svg>
+          </button>
         </motion.div>
 
       </div>
