@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative py-20 px-6 bg-linear-to-b from-blue-800 to-blue-300">
+    <section className="relative py-20 px-6 bg-linear-to-b from-black to-gray-900">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

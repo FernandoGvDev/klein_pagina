@@ -19,7 +19,7 @@ export const Offer = () => {
       style={{ backgroundImage: `url(/pintor.webp)` }}
     >
       {/* Glow */}
-      <div className="absolute w-full h-full bg-black/50 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute w-full h-full bg-linear-to-b from-transparent to-black pointer-events-none" />
 
 
 

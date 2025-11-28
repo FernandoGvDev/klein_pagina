@@ -2,7 +2,7 @@ import CTAButton from "./CTA";
 import { Zap } from "lucide-react";
 
 export const FAQ = () => (
-  <section className="max-w-6xl mx-auto px-6 py-16">
+  <section className="max-w-6xl text-gray-100 mx-auto px-6 py-16">
     <h2 className="text-3xl font-bold">Perguntas frequentes</h2>
     <div className="mt-8 space-y-6">
       <div>

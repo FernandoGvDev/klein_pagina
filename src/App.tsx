@@ -46,7 +46,7 @@ const aprendizados = [
 function App() {
   return (
     <>
-    <div className="">
+    <div className="bg-black">
       <Hero />
       <PainSection />
       <SecaoImagineSolucao />

@@ -23,7 +23,7 @@ const itemVariants = {
 
 const RecapitulacaoEbook: FC = () => {
   return (
-    <div className="w-full max-w-xl mx-auto bg-zinc-900 text-white p-6 rounded-2xl shadow-lg space-y-6 my-20">
+    <div className="w-full max-w-xl mx-auto bg-black text-white p-6 rounded-2xl shadow-lg space-y-6 my-20">
       <h2 className="text-2xl font-bold text-center">
         Tudo que você vai receber
       </h2>
@@ -44,7 +44,7 @@ const RecapitulacaoEbook: FC = () => {
         ))}
       </div>
 
-      <div className="text-center pt-4 border-t border-zinc-700">
+      <div className="text-center pt-4 border-t border-white">
         <p className="text-lg font-semibold">Apenas</p>
         <p className="text-4xl font-bold text-green-400">R$47</p>
       </div>
