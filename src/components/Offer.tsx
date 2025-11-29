@@ -84,24 +84,31 @@ export const Offer = () => {
         </div>
 
         {/* CTA */}
-        <button className="group relative w-full sm:w-auto mx-auto">
-          <div className="absolute -inset-1 rounded-xl bg-linear-to-r from-cyan-600 to-blue-600 opacity-70 blur transition duration-300 group-hover:opacity-100"></div>
+       {/* CTA */}
+<a
+  href="https://pay.kiwify.com.br/1lZmYlB"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative w-full sm:w-auto mx-auto"
+>
+  <div className="absolute -inset-1 rounded-xl bg-linear-to-r from-cyan-600 to-blue-600 opacity-70 blur transition duration-300 group-hover:opacity-100"></div>
 
-          <span
-            className="
-              relative flex flex-col items-center justify-center
-              rounded-lg bg-black px-6 sm:px-7 py-3 
-              leading-none w-full
-            "
-          >
-            <span className="md:text-2xl font-bold text-cyan-500 mb-1">
-              Transforme sua Agenda AGORA
-            </span>
-            <span className="text-[9px] sm:text-[10px] font-light tracking-wider text-cyan-300/80">
-              Clique AQUI
-            </span>
-          </span>
-        </button>
+  <span
+    className="
+      relative flex flex-col items-center justify-center
+      rounded-lg bg-black px-6 sm:px-7 py-3 
+      leading-none w-full
+    "
+  >
+    <span className="md:text-2xl font-bold text-cyan-500 mb-1">
+      Transforme sua Agenda AGORA
+    </span>
+    <span className="text-[9px] sm:text-[10px] font-light tracking-wider text-cyan-300/80">
+      Clique AQUI
+    </span>
+  </span>
+</a>
+
 
         {/* GRID INFERIOR CENTRALIZADO */}
         <div

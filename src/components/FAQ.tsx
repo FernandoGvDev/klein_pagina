@@ -1,5 +1,4 @@
-import CTAButton from "./CTA";
-import { Zap } from "lucide-react";
+import Button from "./button";
 
 export const FAQ = () => (
   <section className="max-w-6xl text-gray-100 mx-auto px-6 py-16">
@@ -29,9 +28,8 @@ export const FAQ = () => (
           Após a compra, o acesso é enviado por email imediatamente com instruções de download.
         </p>
       </div>
-      <div className="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-300 transition-colors duration-300 text-sm md:text-base">
-            <Zap className="w-5 h-5" />
-            <CTAButton text="Quero Garantir Meu Ebook"/>
+      <div>
+            <Button />
             </div>
     </div>
   </section>

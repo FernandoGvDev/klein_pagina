@@ -1,19 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import type { Variants } from "framer-motion"
 import { useRef } from "react";
-
-// -----------------------------
-// Variants
-// -----------------------------
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  }
-};
+import Button from "./button"
 
 const bounceUp: Variants = {
   hidden: { opacity: 0, y: 28, scale: 0.96 },
@@ -120,22 +108,9 @@ export default function SecaoEbook() {
         </motion.div>
 
         {/* CTA */}
-        <motion.div variants={fadeUp} className="w-full mt-30 flex justify-center">
-          <button className="button">
-            <span>Avançar Para o Próximo Nível</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
-              <polygon
-                points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"
-              ></polygon>
-              <polygon
-                points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"
-              ></polygon>
-              <polygon
-                points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"
-              ></polygon>
-            </svg>
-          </button>
-        </motion.div>
+        <div className="mt-2 md:mt-20">
+        <Button />
+        </div>
 
       </div>
     </section>
