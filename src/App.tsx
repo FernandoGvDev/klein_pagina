@@ -9,7 +9,7 @@ import RecapitulacaoEbook from "./components/RecapitulacaoEbook"
 import { FAQ } from "./components/FAQ"
 import TestimonialSection from "./components/TestimonialCard"
 import SobreSecao from "./components/SobreSecao"
-import PurchaseNotifications from "./components/PurchaseNotifications"
+import { PurchaseNotifications } from "./components/PurchaseNotifications"
 
 const aprendizados = [
   {
