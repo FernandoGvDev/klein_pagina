@@ -107,8 +107,8 @@ export const PurchaseNotifications = () => {
               <CheckCircle className="text-green-600 h-6 w-6 flex-shrink-0" />
               <div className="flex flex-col">
                 <span className="font-semibold text-gray-800">{item.nome}</span>
-                <span className="text-sm text-gray-500">{item.tempo}</span>
-                <span className="text-xs text-gray-400 mt-1">
+                <span className="text-sm text-gray-700">{item.tempo}</span>
+                <span className="text-xs text-gray-500 mt-1">
                   Comprou com {item.metodo}
                 </span>
               </div>
