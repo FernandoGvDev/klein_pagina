@@ -77,11 +77,11 @@ export const Offer = () => {
           </span>
 
           <span className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-emerald-400">
-            R$47
+            R$27
           </span>
 
           <span className="text-xs sm:text-sm text-neutral-300 font-semibold">
-            Economize R$215 agora!
+            Economize R$233 agora!
           </span>
         </div>
 
